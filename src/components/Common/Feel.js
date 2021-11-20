@@ -14,12 +14,12 @@ const Feel = ({ navigation, feeling, imagePath }) => {
     energized: require("../../../assets/images/energized-1.png"),
     recovered: require("../../../assets/images/RECOVERED-1.png"),
   };
+  //display text
   return (
     <View style={styles.container}>
       <ImageBackground source={images[imagePath]} style={styles.image}>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Creative", { path: imagePath })}
-        >
+          onPress={() => navigation.navigate("Creative", { path: imagePath })}>
           <Text style={styles.text}>{feeling.toUpperCase()}</Text>
         </TouchableOpacity>
       </ImageBackground>
